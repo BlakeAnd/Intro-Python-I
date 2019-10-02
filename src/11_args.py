@@ -34,11 +34,8 @@ print(f2(*a))    # Should print 22
 # arguments. Google "python default arguments" for a hint.
 
 # YOUR CODE HERE
-def f3(a, *args):
-  if args == ():
-    return a + 1
-  for arg in args:
-    a = a + arg
+def f3(a, b = 1):
+  a = a + b
   return a
 
 print(f3(1, 2))  # Should print 3
