@@ -22,3 +22,19 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+print(datetime.now().month)
+#print (calendar.month(2019, 3, 2, 1)) 
+
+def print_calendar(a, month = datetime.now().month, year = datetime.now().year):
+  print (calendar.month(year, month, 2, 1))
+
+args = []
+for item in sys.argv:
+  args.append(item)
+
+last_args = args[1:]
+last_args = [int(i) for i in last_args]
+print(args)
+print(last_args)
+print_calendar(args[0], *last_args)
